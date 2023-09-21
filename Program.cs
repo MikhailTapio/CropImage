@@ -19,7 +19,7 @@ internal class Program
         Console.WriteLine("请将所有待裁剪图片放入本软件目录下的input文件夹，按回车键继续。");
         Console.ReadLine();
 
-        string[] imgFiles = Directory.GetFiles(inputFolder, "*.*", SearchOption.TopDirectoryOnly)
+        string[] imgFiles = Directory.GetFiles(inputFolder, "*.*", SearchOption.AllDirectories)
             .Where(file => file.ToLower().EndsWith(".png") || file.ToLower().EndsWith(".jpg"))
             .ToArray();
 
